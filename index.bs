@@ -459,21 +459,21 @@ accept the incoming connection:
    running these steps and act as if the requested service is not
    available.
 
-2. [=Get a session ID for a WebSocket resource=] with |resource name|
+1. [=Get a session ID for a WebSocket resource=] with |resource name|
    and let |session id| be that value. If |session id| is null then
    stop running these steps and act as if the requested service is not
    available.
 
-3. If there is a [=/session=] in the list of [=active sessions=] with
+1. If there is a [=/session=] in the list of [=active sessions=] with
    |session id| as its [=session ID=] then let |session| be that
    session. Otherwise stop running these steps and act as if the
    requested service is not available.
 
-4. Run any other implementation-defined steps to decide if the
+1. Run any other implementation-defined steps to decide if the
    connection should be accepted, and if it is not stop running these
    steps and act as if the requested service is not available.
 
-5. Otherwise set |session|'s [=WebSocket connection=] to
+1. Otherwise set |session|'s [=WebSocket connection=] to
    |connection|, and proceed with the WebSocket [=server-side
    requirements=] when a server chooses to accept an incoming connection.
 
@@ -551,16 +551,16 @@ To <dfn>start listening for a WebSocket connection</dfn> given a
     [=listener/host=], [=listener/port=], [=listener/secure flag=],
     and an empty [=list of WebSocket resources=].
 
- 2. Let |resource name| be the result of [=constructing a WebSocket
+ 1. Let |resource name| be the result of [=constructing a WebSocket
     resource name=] given |session|.
 
- 3. Append |resource name| to the [=list of WebSocket resources=] for
+ 1. Append |resource name| to the [=list of WebSocket resources=] for
     |listener|.
 
- 4. [=set/Append=] |listener| to the [=remote end=]'s [=active
+ 1. [=set/Append=] |listener| to the [=remote end=]'s [=active
      listeners=].
 
- 5. Return |listener|.
+ 1. Return |listener|.
 
 </div>
 
