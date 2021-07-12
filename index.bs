@@ -1585,7 +1585,6 @@ Capabilities = {
     ?browserName: text,
     ?browserVersion: text,
     ?platformName: text,
-    ?pageLoadStrategy: "none" / "eager" / "normal",
     ?proxy: {
         ?proxyType: "pac" / "direct" / "autodetect" / "system" / "manual",
         ?proxyAutoconfigUrl: text,
@@ -1595,15 +1594,7 @@ Capabilities = {
         ?sslProxy: text,
         ?socksProxy: text,
         ?socksVersion: int,
-    }
-    ?strictFileInteractability: bool,
-    ?timeouts: {
-        ?script: int / null,
-        ?pageLoad: int,
-        ?implicit: int
     },
-    ?unhandledPromptBehaviour: "dismiss" / "accept" / "dismiss and notify" / "accept and notify" / "ignore",
-    ?webSocketUrl: bool,
     *text => any
 };
 </pre>
@@ -1696,7 +1687,6 @@ This is a [=static command=].
           browserName: text,
           browserVersion: text,
           platformName: text,
-          pageLoadStrategy: "none" / "eager" / "normal",
           proxy: {
             ?proxyType: "pac" / "direct" / "autodetect" / "system" / "manual",
             ?proxyAutoconfigUrl: text,
@@ -1708,14 +1698,6 @@ This is a [=static command=].
             ?socksVersion: int,
           },
           setWindowRect: bool,
-          strictFileInteractability: bool,
-          timeouts: {
-            script: int / null,
-            pageLoad: int,
-            implicit: int
-          },
-          ?unhandledPromptBehaviour: "dismiss" / "accept" / "dismiss and notify" / "accept and notify" / "ignore",
-          ?webSocketUrl: text,
           *text => any
         }
       }
