@@ -2159,7 +2159,7 @@ browsing context to the given URL.
 </dl>
 
 <div algorithm="remote end steps for browsingContext.navigate">
-The [=remote end steps=] with |command parameters| are:
+The [=remote end steps=] with <var ignore>session</var> and |command parameters| are:
 
   1. Let |context id| be the value of the <code>context</code> field of
      |command parameters|.
@@ -2409,8 +2409,6 @@ become inaccessible but not yet get discarded because bfcache.
 The [=remote end event trigger=] is the <dfn export>WebDriver-BiDi navigation
 started</dfn> steps given |context| and |navigation status|:
 
- 1. If the [=current session=] is null, return.
-
  1. Let |params| be the result of [=get the navigation info=] given |context|
     and |navigation status|.
 
@@ -2449,8 +2447,6 @@ started</dfn> steps given |context| and |navigation status|:
 <div algorithm>
 The [=remote end event trigger=] is the <dfn export>WebDriver-BiDi fragment
 navigated</dfn> steps given |context| and |navigation status|:
-
- 1. If the [=current session=] is null, return.
 
  1. Let |params| be the result of [=get the navigation info=] given |context|
     and |navigation status|.
@@ -2491,8 +2487,6 @@ navigated</dfn> steps given |context| and |navigation status|:
 The [=remote end event trigger=] is the <dfn export>WebDriver-BiDi DOM content
 loaded</dfn> steps given |context| and |navigation status|:
 
- 1. If the [=current session=] is null, return.
-
  1. Let |params| be the result of [=get the navigation info=] given |context|
     and |navigation status|.
 
@@ -2532,8 +2526,6 @@ loaded</dfn> steps given |context| and |navigation status|:
 The [=remote end event trigger=] is the <dfn export>WebDriver-BiDi load
 complete</dfn> steps given |context| and |navigation status|:
 
- 1. If the [=current session=] is null, return.
-
  1. Let |params| be the result of [=get the navigation info=] given |context|
     and |navigation status|.
 
@@ -2571,8 +2563,6 @@ complete</dfn> steps given |context| and |navigation status|:
 <div algorithm>
 The [=remote end event trigger=] is the <dfn export>WebDriver-BiDi download
 started</dfn> steps given |context| and |navigation status|:
-
- 1. If the [=current session=] is null, return.
 
  1. Let |params| be the result of [=get the navigation info=] given |context|
     and |navigation status|.
@@ -2612,8 +2602,6 @@ started</dfn> steps given |context| and |navigation status|:
 The [=remote end event trigger=] is the <dfn export>WebDriver-BiDi navigation
 aborted</dfn> steps given |context| and |navigation status|:
 
- 1. If the [=current session=] is null, return.
-
  1. Let |params| be the result of [=get the navigation info=] given |context|
     and |navigation status|.
 
@@ -2652,8 +2640,6 @@ aborted</dfn> steps given |context| and |navigation status|:
 <div algorithm>
 The [=remote end event trigger=] is the <dfn export>WebDriver-BiDi navigation
 failed</dfn> steps given |context| and |navigation status|:
-
- 1. If the [=current session=] is null, return.
 
  1. Let |params| be the result of [=get the navigation info=] given |context|
     and |navigation status|.
